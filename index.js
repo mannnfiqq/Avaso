@@ -62,9 +62,9 @@ const scrollUp = () => {
 window.addEventListener('scroll', scrollUp)
 
 /*=============== DARK LIGHT THEME ===============*/
-const themeButton = document.getElementById('theme-button')
+const themeButton = document.getElementById('switch')
 const darkTheme = 'dark-theme'
-const iconTheme = 'ri-sun-fill'
+const iconTheme = '.sun'
 
 //previously selected
 const selectedTheme = localStorage.getItem('selected-theme')
@@ -72,12 +72,12 @@ const selectedIcon = localStorage.getItem('selected-icon')
 
 //obtaining the current theme
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-fill' : 'ri-sun-fill'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? '.moon' : '.sun'
 
 //validate the previously chosen
 if (selectedTheme) {
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'ri-moon-fill' ? 'add' : 'remove'](iconTheme)
+    themeButton.classList[selectedIcon === '.moon' ? 'add' : 'remove'](iconTheme)
 }
 
 //activate and deactivate theme using button
