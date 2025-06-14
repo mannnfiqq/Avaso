@@ -98,8 +98,8 @@ const sr = ScrollReveal({
     reset: true //repeat animation
 })
 
-sr.reveal(`.home__container, .footer__container`)
+sr.reveal(`.home__container,.f1inS__container, .footer__container`)
 sr.reveal(`.home__title`, {delay: 400})
 sr.reveal(`.home__subtitle`, {delay: 600})
-sr.reveal(`.home__description`, {delay: 900})
-sr.reveal(`.home__data .button`, {delay: 1200})
+sr.reveal(`.home__description`, {delay: 700})
+sr.reveal(`.home__data .button`, {delay: 1000})
