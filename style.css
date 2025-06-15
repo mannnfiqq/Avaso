@@ -714,6 +714,10 @@ img {
         max-width: 1200px;
     }
 
+    .f1inS__title {
+        margin-bottom: 2rem;
+    }
+
     .f1inS__img {
         max-width: 625px;
         transform: translateX(-6rem);
