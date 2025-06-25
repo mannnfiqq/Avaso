@@ -72,3 +72,27 @@ const scrollUp = () => {
                         : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+/*=============== PROGRESS BAR ===============*/
+window.addEventListener("scroll", () => {
+    const bar = document.querySelector(".timeline__progress__bar");
+    const footer = document.querySelector("footer");
+
+    const barRect = bar.getBoundingClientRect();
+    const footerRect = footer.getBoundingClientRect();
+
+    // Check if bottom of the bar is about to overlap footer
+    if (barRect.bottom >= footerRect.top) {
+        bar.classList.add("stopped");
+
+        // Position bar just above footer
+        const offset = window.scrollY + footerRect.top - bar.offsetHeight;
+        bar.style.top = offset + "px";
+        bar.style.position = "absolute";
+        
+    } else {
+        bar.classList.remove("stopped");
+        bar.style.top = "";
+        bar.style.position = "fixed";
+    }
+});

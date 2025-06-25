@@ -18,6 +18,8 @@
     --container-color: hsl(220, 8%, 96%);
     --opacity-color-30: hsla(0, 0%, 90%, .3);
     --opacity-color-20: hsla(0, 0%, 90%, .2);
+    --fade-top-gradient: linear-gradient( hsl(220, 8%, 96%), hsl(220, 8%, 96%, 0));
+    --fade-bottom-gradient: linear-gradient(to top, hsl(220, 8%, 96%), hsl(220, 8%, 96%, 0));
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -114,10 +116,12 @@ img {
     --container-color: hsl(220, 8%, 12%);
     --opacity-color-30: hsla(0, 0%, 15%, .3);
     --opacity-color-20: hsla(0, 0%, 15%, .2);
+    --fade-top-gradient: linear-gradient(hsl(220, 8%, 12%), hsla(220, 8%, 12%, 0));
+    --fade-bottom-gradient: linear-gradient(to top, hsl(220, 8%, 12%), hsla(220, 8%, 12%, 0));
 }
 
 /*========== 
-	Color changes in some parts of 
+	Color changes in some parts of
 	the website, in dark theme
 ==========*/
 .dark-theme::-webkit-scrollbar {
@@ -279,6 +283,180 @@ img {
     color: var(--title-color);
 }
 
+/*=============== TERMINAL ===============*/
+.page__wrapper img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+.page__wrapper h2 {
+    font-size: 50px;
+    background: var(--main-color);
+    background: -webkit-linear-gradient(to right, var(--main-color), var(--secondary-color));
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.page__wrapper {
+    z-index: 0;
+    position: relative;
+}
+
+.timeline__container {
+    width: 90vw;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin__bottom__medium {
+    margin-bottom: 32px;
+}
+
+.paragraph-large {
+    letter-spacing: -0.02em;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.section__timeline__heading {
+    background-color: var(--container-color);
+}
+
+.padding__vertical__xlarge {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.timeline__main__heading__wrapper {
+    color: var(--container-color);
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline__component {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+}
+
+.timeline__item {
+    z-index: 2;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 180px 1fr;
+    grid-auto-columns: 1fr;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    position: relative;
+}
+
+.timeline__left {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.timeline__centre {
+    justify-content: center;
+    display: flex;
+}
+
+.timeline__date__text {
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    position: sticky;
+    top: 50vh;
+}
+
+.timeline__text {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.timeline__circle {
+    background-color: var(--text-color);
+    border-radius: 100%;
+    width: 15px;
+    min-width: 15px;
+    max-width: 15px;
+    height: 15px;
+    min-height: 15px;
+    max-height: 15px;
+    position: sticky;
+    top: 50vh;
+    box-shadow: 0 0 0 8px var(--container-color);
+}
+
+.timeline__progress {
+    z-index: -2;
+    background-color: var(--text-color);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline__progress__bar {
+    z-index: -1;
+    background: var(--main-color);
+    background: -webkit-linear-gradient(to bottom, var(--main-color), var(--secondary-color));
+    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color));
+
+    width: 3px;
+    max-height: 50vh;
+    position: fixed;
+    inset: 0 auto 50vh;
+    transition: height 0.3s ease;
+}
+
+.section__timeline {
+    z-index: -3;
+    background-color: var(--container-color);
+    position: relative;
+}
+
+.margin__bottom__xlarge {
+    margin-bottom: 56px;
+}
+
+.overlay__fade__top {
+    background-image: var(--fade-top-gradient);
+    height: 80px;
+    position: absolute;
+    inset: 0% 0% auto;
+}
+
+.overlay__fade__bottom {
+    background-image: var(--fade-bottom-gradient);
+    height: 80px;
+    position: absolute;
+    inset: auto 0% 0%;
+}
+
+.timeline__closer {
+    height: 50vh;
+    background-color: var(--container-color);
+}
+
 /*=============== FOOTER ===============*/
 .footer {
     background-color: var(--black-color);
@@ -424,6 +602,57 @@ img {
     }
 }
 
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 40px;
+    }
+
+    .paragraph__large {
+        font-size: 18px;
+    }
+
+    .padding__vertical__xlarge {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .timeline__item {
+        grid-template-columns: 64px 1fr;
+        width: 100%;
+    }
+
+    .timeline__left {
+        text-align: left;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .timeline__centre {
+        justify-content: flex-start;
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .timeline__right {
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+
+    .timeline__date__text {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    .timeline__text {
+        font-size: 20px;
+    }
+
+    .timeline__progress {
+        left: 6px;
+    }
+
+    .margin__bottom__xlarge {
+        margin-bottom: 48px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .footer__content {
         grid-template-columns: repeat(2, max-content);
@@ -464,11 +693,11 @@ img {
     }
 
     .nav__link {
-        color: var(--white-color);
+        color: var(--title-color);
     }
 
     .nav__link::after {
-        background-color: var(--white-color);
+        background-color: var(--title-color);
     }
 
     .bg-header .nav__link {
