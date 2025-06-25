@@ -415,19 +415,6 @@ img {
     position: absolute;
 }
 
-.timeline__progress__bar {
-    z-index: -1;
-    background: var(--main-color);
-    background: -webkit-linear-gradient(to bottom, var(--main-color), var(--secondary-color));
-    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color));
-
-    width: 3px;
-    max-height: 50vh;
-    position: fixed;
-    inset: 0 auto 50vh;
-    transition: height 0.3s ease;
-}
-
 .section__timeline {
     z-index: -3;
     background-color: var(--container-color);
