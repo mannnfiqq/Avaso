@@ -43,7 +43,7 @@
 }
 
 /*========== Responsive typography ==========*/
-@media screen and (min-width: 1150px) {
+@media (min-width: 1150px) {
     :root {
         --biggest-font-size: 6rem;
         --big-font-size: 3rem;
@@ -204,7 +204,7 @@ img {
 }
 
 /* Navigation for mobile devices */
-@media screen and (max-width: 1150px) {
+@media (max-width: 1150px) {
     .nav__menu {
         position: fixed;
         top: -120%;
@@ -401,68 +401,136 @@ img {
 }
 
 /*=============== WHAT IS F1INS ===============*/
-.f1inS {
-    position: relative;
-    background-color: var(--body-color);
+.f1__section {
+  padding: 7rem;
+  background-color: var(--body-color);
 }
 
-.f1inS .button {
-    background-color: var(--secondary-color);
-    color: var(--body-color);
+.f1__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.f1inS__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 3rem;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-inline: 1rem;
+.f1__image img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-.f1inS__title {
-    color: var(--title-color);
-    margin: 1.5rem 0;
-    line-height: 1.2;
+.f1__text {
+  max-width: 550px;
 }
 
-.f1inS__title span {
+.f1__text span {
     color: var(--secondary-color);
-    font-weight: var(--font-bold);
 }
 
-.f1inS__data {
-    text-align: center;
-    max-width: 600px;
+.f1__text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--title-color);
 }
 
-.f1inS__description {
-    margin-bottom: 1.5rem;
+.f1__text p {
+    font-size: 1.1rem;
     color: var(--text-color);
     line-height: 1.6;
 }
 
-.f1inS__img {
-    position: relative;
-    max-width: 400px;
-    border-radius: 1.5rem;
-    justify-self: center;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/*=============== WHAT IS AVASO ===============*/
+.avaso__section {
+    padding: 7rem;
+    background-color: var(--body-color);
 }
 
-.f1inS__img img {
+.avaso__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.avaso__image img {
     width: 100%;
+    max-width: 550px;
     height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.f1inS__img:hover img {
-    transform: scale(1.02);
+.avaso__text {
+    padding-left: 25px;
+    max-width: 5500px;
+    flex: 1;
+}
+
+.avaso__text span {
+    color: var(--secondary-color);
+}
+
+.avaso__text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--title-color);
+}
+
+.avaso__text p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.avaso__image {
+    flex: 1;
+}
+
+/*=============== COUNTDOWN CONTAINER ===============*/
+.countdown__container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--body-color);
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.countdown__content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: var(--text-color);
+}
+
+.countdown__content h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.countdown__hightlight {
+    color: var(--secondary-color);
+}
+
+.the__day {
+    display: flex;
+}
+
+.the__day div {
+    flex-basis: 100px;
+}
+
+.the__day div p {
+    font-size: 60px;
+    margin-bottom: -4px;
 }
 
 /*=============== FOOTER ===============*/
@@ -573,7 +641,7 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
     .container {
         margin-inline: 1rem;
     }
@@ -594,14 +662,13 @@ img {
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .home__container {
         grid-template-columns: 400px;
         justify-content: center;
     }
 
-    .home__swiper,
-    .f1inS__container {
+    .home__swiper {
         max-width: 400px;
     }
 
@@ -610,14 +677,29 @@ img {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (max-width: 768px) {
+    .content__wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text__container {
+        max-width: 100%;
+    }
+
+    .image__container img {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
     .footer__content {
         grid-template-columns: repeat(2, max-content);
     }
 }
 
 /* For large devices */
-@media screen and (min-width: 1150px) {
+@media (min-width: 1150px) {
     .container {
         margin-inline: auto;
     }
@@ -701,28 +783,6 @@ img {
         right: 2rem;
     }
 
-    .f1inS__container {
-        display: grid;
-        grid-template-columns: 500px 700px;
-        align-items: center;
-        column-gap: 4rem;
-        max-width: 1200px;
-    }
-
-    .f1inS__title {
-        margin-bottom: 2rem;
-    }
-
-    .f1inS__img {
-        max-width: 625px;
-        transform: translateX(-6rem);
-    }
-
-    .f1inS__data {
-        max-width: 90%;
-        left: 10rem;
-    }
-
     .footer {
         padding-top: 4.5rem;
     }
@@ -749,8 +809,49 @@ img {
     }
 }
 
+@media (max-width: 1370px) {
+    .f1__container,
+    .avaso__container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .f1__text,
+    .avaso__text {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .f1__text h2,
+    .avaso__text h2 {
+        font-size: 2rem;
+    }
+
+    .f1__text p,
+    .avaso__text p {
+        font-size: 1rem;
+    }
+
+    .avaso__container {
+        flex-direction: column-reverse;
+        align-items: center; /* optional, center horizontally */
+    }
+    
+    .avaso__text {
+        padding-left: 0; /* reset padding for better mobile look */
+        max-width: 100%; /* full width */
+    }
+    
+    .avaso__image {
+        max-width: 550px; /* keep image size consistent */
+        width: 100%;
+        margin-bottom: 1.5rem; /* space below image */
+    }
+}
+
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
-@media screen and (min-width: 2048px) {
+@media (min-width: 2048px) {
     body {
         zoom: 1.4;
     }

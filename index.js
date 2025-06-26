@@ -95,11 +95,29 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2000,
     delay: 300,
-    reset: true //repeat animation
+    reset: false //repeat animation
 })
 
-sr.reveal(`.home__container,.f1inS__container, .avaso-about__container, .footer__container`)
+sr.reveal(`.home__container, .f1__section, .avaso__section, .countdown__container, .footer__container`)
 sr.reveal(`.home__title`, {delay: 400})
 sr.reveal(`.home__subtitle`, {delay: 600})
 sr.reveal(`.home__description`, {delay: 700})
 sr.reveal(`.home__data .button`, {delay: 1000})
+
+/*=============== COUNTDOWN ===============*/
+var countDownDate = new Date("Sep 25, 2025 00:00:00").getTime();
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 *24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
