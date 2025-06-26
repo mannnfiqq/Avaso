@@ -76,7 +76,7 @@ body {
 }
 
 body {
-    background-color: var(--body-color);
+    background-color: var(--container-color);
     color: var(--text-color);
     transition: background-color .4s;
 }
