@@ -537,7 +537,7 @@ img {
     }
 
     .nav__link::after {
-        background-color: var(--white-color);
+        background-color: var(--title-color);
     }
 
     .bg-header .nav__link {

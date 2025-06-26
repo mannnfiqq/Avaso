@@ -83,7 +83,3 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__container,.f1inS__container, .gallery, .footer__container`)
-sr.reveal(`.home__title`, {delay: 400})
-sr.reveal(`.home__subtitle`, {delay: 600})
-sr.reveal(`.home__description`, {delay: 700})
-sr.reveal(`.home__data .button`, {delay: 1000})
