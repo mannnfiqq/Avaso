@@ -82,4 +82,4 @@ const sr = ScrollReveal({
     reset: true //repeat animation
 })
 
-sr.reveal(`.home__container,.f1inS__container, .page__wrapper, .footer__container`)
+sr.reveal(`.home__container, .page__wrapper, .footer__container`)
