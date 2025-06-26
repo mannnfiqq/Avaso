@@ -72,3 +72,14 @@ const scrollUp = () => {
                         : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+/*=============== SCROLL REVEAL EFFECT ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    delay: 150,
+    reset: false //repeat animation
+})
+
+sr.reveal(`.home__container, .body__content, .body__container, .contact-us, .footer__container`)
