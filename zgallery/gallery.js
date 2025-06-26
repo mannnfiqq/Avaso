@@ -79,7 +79,7 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2000,
     delay: 150,
-    reset: true //repeat animation
+    reset: false //repeat animation
 })
 
 sr.reveal(`.home__container, .gallery, .footer__container`)
