@@ -303,6 +303,9 @@ img {
     letter-spacing: -0.02em;
     font-size: 20px;
     color: var(--text-color);
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    padding: 0 40px;
 }
 
 .padding__vertical__xlarge {

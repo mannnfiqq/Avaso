@@ -318,10 +318,12 @@ img {
     margin-bottom: 32px;
 }
 
-.paragraph-large {
+.paragraph__large {
     letter-spacing: -0.02em;
     font-size: 20px;
     color: var(--text-color);
+    line-height: 1.6;
+    letter-spacing: -0.02em;
 }
 
 .section__timeline__heading {
@@ -337,6 +339,7 @@ img {
     color: var(--container-color);
     text-align: center;
     max-width: 640px;
+    padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
 }
