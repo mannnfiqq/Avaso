@@ -627,6 +627,26 @@ img {
         margin-inline: 1rem;
     }
 
+    .contact-us {
+        padding: 1rem;
+    }
+
+    .contact-us h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-us h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-us p {
+        font-size: 0.738rem;
+    }
+
+    .contact-us__form {
+        min-width: 50px;
+    }
+
     .footer__content {
         display: grid;
         justify-content: center;

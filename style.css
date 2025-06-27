@@ -142,6 +142,7 @@ img {
 .section {
     padding-block: 5rem 1rem;
 }
+
 .section__title {
     font-size: var(--big-font-size);
     color: var(--title-color);
@@ -654,6 +655,16 @@ img {
         font-size: 1.5rem;
     }
 
+    .f1__section,
+    .avaso__section {
+        padding: 2rem 1rem;
+    }
+
+    .f1__container,
+    .avaso__container {
+        gap: 1rem;
+    }
+
     .footer__content {
         display: grid;
         justify-content: center;
@@ -678,6 +689,24 @@ img {
 }
 
 @media (max-width: 768px) {
+    .f1__section,
+    .avaso__section {
+        padding: 40px 2rem;
+    }
+
+    .f1__container,
+    .avaso__container {
+        gap: 1rem;
+    }
+
+    .countdown__container h1 {
+        font-size: 3rem;
+    }
+
+    .the__day p {
+        font-size: 1rem;
+    }
+    
     .content__wrapper {
         flex-direction: column;
         text-align: center;

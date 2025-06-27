@@ -43,7 +43,7 @@
 }
 
 /*========== Responsive typography ==========*/
-@media screen and (min-width: 1150px) {
+@media (min-width: 1150px) {
     :root {
         --biggest-font-size: 6rem;
         --big-font-size: 3rem;
@@ -204,7 +204,7 @@ img {
 }
 
 /* Navigation for mobile devices */
-@media screen and (max-width: 1150px) {
+@media (max-width: 1150px) {
     .nav__menu {
         position: fixed;
         top: -120%;
@@ -564,7 +564,7 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
     .container {
         margin-inline: 1rem;
     }
@@ -577,20 +577,20 @@ img {
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .footer__content {
         grid-template-columns: repeat(2, max-content);
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .footer__content {
         grid-template-columns: repeat(2, max-content);
     }
 }
 
 /* For large devices */
-@media screen and (min-width: 1150px) {
+@media (min-width: 1150px) {
     .container {
         margin-inline: auto;
     }
@@ -665,7 +665,7 @@ img {
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
-@media screen and (min-width: 2048px) {
+@media (min-width: 2048px) {
     body {
         zoom: 1.4;
     }
